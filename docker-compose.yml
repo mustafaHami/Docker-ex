@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  vue:
+    build: 
+      context: .
+      target: 'develop-stage'
+    container_name: template-vue
+    ports: 
+      - 5173:5173
+    volumes:
+      - ./hello-world:/hello-world
+      - /hello-world/node_modules
